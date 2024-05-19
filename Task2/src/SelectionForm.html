@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Premier League Report</title>
+    <link rel="stylesheet" href="css/Layout.css" />
+</head>
+<body class="selection-form-specific">
+    <header>
+        <h3>CSYM019 - Premier League Results</h3>
+        <nav>
+            <ul>
+                <li><a href="./Login.html">Home</a></li>
+                <li><a href="./SelectionForm.html">Premier League Report</a></li>
+                <li><a href="./EntryForm.html">Add New Football Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h3>Select Football Teams for Report</h3>
+        <form action="SubmitTeams.php" method="post">
+            <div class="selection-container">
+                <div class="scrollable-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Position</th>
+                                <th>Team</th>
+                                <th>Played</th>
+                                <th>Won</th>
+                                <th>Drawn</th>
+                                <th>Lost</th>
+                                <th>For</th>
+                                <th>Against</th>
+                                <th>GD</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php include 'PopulateTeam.php'; ?>
+                        </tbody>
+                    </table>
+                </div>
+                <input type="submit" value="Generate Report" class="submit-button" />
+            </div>
+        </form>
+    </main>
+    <footer>&copy; CSYM019 2024</footer>
+</body>
+</html>

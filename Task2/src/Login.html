@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <link rel="stylesheet" href="css/Layout.css">
+</head>
+<body class="login-signup-page">
+    <div class="auth-page">
+        <div class="auth-container">
+            <div class="tab-buttons">
+                <button id="login-tab" class="active-tab" onclick="showLogin()">Sign In</button>
+                <button id="register-tab" onclick="showRegister()">Sign Up</button>
+            </div>
+            <div id="login-section" class="auth-section active-section">
+                <h2>Sign In</h2>
+                <form action="Login.php" method="post">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <div class="stay-signed-in">
+                        <input type="checkbox" id="stay-signed-in">
+                        <label for="stay-signed-in">Keep me Signed In</label>
+                    </div>
+                    <button type="submit" class="main-btn">Sign In</button>
+                    <a href="#" class="password-link">Forgot Password?</a>
+                </form>
+            </div>
+            <div id="register-section" class="auth-section">
+                <h2>Sign Up</h2>
+                <form action="Register.php" method="post">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password_repeat" placeholder="Repeat Password" required>
+                    <button type="submit" class="main-btn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/LoginSignupScripts.js"></script>
+</body>
+</html>

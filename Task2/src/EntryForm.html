@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New Football Team</title>
+    <link rel="stylesheet" href="css/Layout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <header>
+        <h3>CSYM019 - Premier League Results</h3>
+        <nav>
+            <ul>
+                <li><a href="./Login.html">Home</a></li>
+                <li><a href="./SelectionForm.html">Premier League Report</a></li>
+                <li><a href="./EntryForm.html">Add New Football Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h3>Football Teams Entry Form</h3>
+        <div class="form-container">
+            <form id="teamForm" method="POST" action="entryFormHandler.php">
+                <div class="form-fields">
+                    <label for="club">Club:</label>
+                    <input type="text" id="club" name="club" required><br>
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required><br>
+                    <label for="manager">Manager:</label>
+                    <input type="text" id="manager" name="manager" required><br>
+                    <label for="founded">Founded Year:</label>
+                    <input type="number" id="founded" name="founded" required><br>
+                    <label for="stadium">Stadium:</label>
+                    <input type="text" id="stadium" name="stadium"><br>
+                    <select id="teamAction" name="action">
+                        <option value="add">Add Football Team</option>
+                        <option value="update">Update Football Team</option>
+                        <option value="delete">Delete Football Team</option>
+                    </select><br>
+                    <input type="hidden" name="formType" value="teamForm">
+                    <input type="button" value="Submit" onclick="handleFormSubmit('teamForm')" />
+                </div>
+            </form>
+            <form id="matchForm" method="POST" action="EntryFormHandler.php">
+                <div class="form-fields">
+                    <label for="date">Date:</label>
+                    <input type="text" id="date" name="date" required><br>
+                    <label for="home_team">Home Team:</label>
+                    <input type="text" id="home_team" name="home_team" required><br>
+                    <label for="home_score">Home Score:</label>
+                    <input type="number" id="home_score" name="home_score" required><br>
+                    <label for="away_team">Away Team:</label>
+                    <input type="text" id="away_team" name="away_team" required><br>
+                    <label for="away_score">Away Score:</label>
+                    <input type="number" id="away_score" name="away_score" required><br>
+                    <select id="matchAction" name="action">
+                        <option value="add">Add Match Details</option>
+                        <option value="update">Update Match Details</option>
+                        <option value="delete">Delete Match Details</option>
+                    </select><br>
+                    <input type="hidden" name="formType" value="matchForm">
+                    <input type="button" value="Submit" onclick="handleFormSubmit('matchForm')" />
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>&copy; CSYM019 2024</footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr("#date", {
+                dateFormat: "Y-m-d",
+            });
+        });
+    </script>
+    <script src="javascript/EntryForm.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Premier League Report</title>
+    <link rel="stylesheet" href="css/Layout.css" />
+    <!-- Updated Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h3>CSYM019 - Premier League Results</h3>
+        <nav>
+            <ul>
+                <li><a href="./Login.html">Home</a></li>
+                <li><a href="./SelectionForm.html">Premier League Report</a></li>
+                <li><a href="./EntryForm.html">Add New Football Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="report-main">
+        <h3>Football Teams Report</h3>
+        <div class="report-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Club</th>
+                        <th>City</th>
+                        <th>Manager</th>
+                        <th>Founded</th>
+                        <th>Stadium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic rows filled by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div id="pieChartSection" class="chart-section">
+            <h4>Pie Chart of Matches</h4>
+            <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+        <div id="barChartSection" class="chart-section">
+            <h4>Bar Chart of Team Comparisons</h4>
+            <div class="chart-container">
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+        <!-- Hidden div to pass team data -->
+        <div id="teamData" style="display: none;">
+            <?php echo file_get_contents('report_data.json'); ?>
+        </div>
+    </main>
+    <footer>&copy; CSYM019 2024</footer>
+    <script src="javascript/Report.js"></script>
+</body>
+</html>

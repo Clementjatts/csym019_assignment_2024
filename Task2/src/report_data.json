@@ -1,0 +1,40 @@
+{
+    "teams": [
+        {
+            "club_id": 6,
+            "name": "Burnley",
+            "city": "    Burnley",
+            "manager": "Vincent Kompany",
+            "founded": 1882,
+            "stadium": "Turf Moor",
+            "wins": 6,
+            "losses": 22,
+            "drawn": 9,
+            "remaining": 1
+        },
+        {
+            "club_id": 12,
+            "name": "Luton Town",
+            "city": "Luton",
+            "manager": "Rob Edwards",
+            "founded": 1885,
+            "stadium": "Kenilworth Road",
+            "wins": 6,
+            "losses": 23,
+            "drawn": 8,
+            "remaining": 1
+        },
+        {
+            "club_id": 17,
+            "name": "Sheffield United",
+            "city": "Sheffield",
+            "manager": "Paul Heckingbottom",
+            "founded": 1889,
+            "stadium": "Bramall Lane",
+            "wins": 3,
+            "losses": 26,
+            "drawn": 7,
+            "remaining": 2
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html/
+    depends_on:
+      - db
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: student
+      MYSQL_PASSWORD: 12345678
+      MYSQL_DB: premier_league
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Ayomide1139,
+      MYSQL_DATABASE: premier_league
+      MYSQL_USER: student
+      MYSQL_PASSWORD: 12345678
+    volumes:
+      - db_data:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+
+volumes:
+  db_data:

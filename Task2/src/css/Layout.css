@@ -1,0 +1,408 @@
+/* Shared CSS for HTML pages*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #1161ee;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+main {
+    background-color: whitesmoke;
+    color: black;
+    margin-top: 60px;
+    padding: 10px 20px;
+    flex-grow: 1;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+
+main > h3 {
+    text-align: center;
+    font-size: 28px;
+    color: #1161ee;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #1161ee;
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    clear: both;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling specific to EntryForm page */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 1em;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 16px;
+    margin-bottom: 1em;
+    height: 500px;
+}
+
+.form-fields label {
+    margin-bottom: 0.5em;
+    color: #000000;
+}
+
+.form-fields input[type="text"],
+.form-fields input[type="number"],
+.form-fields input[type="date"],
+.form-fields select {
+    padding: 12px;
+    margin-bottom: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-fields select {
+    padding: 12px;
+    margin-bottom: 0.5em;
+}
+
+.form-fields input[type="button"] {
+    background-color: #1161ee;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+.form-fields input[type="button"]:hover {
+    background-color: #007acc;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    border-color: red;
+    animation: shake 0.5s;
+}
+
+/* Styling specific to SelectionForm Page */
+
+.selection-form-specific .selection-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.selection-form-specific .scrollable-table {
+    overflow-y: auto;
+    max-height: 500px;
+    border: 1px solid #ccc;
+}
+
+.selection-form-specific table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.selection-form-specific th, .selection-form-specific td {
+    text-align: center;
+    padding: 8px;
+}
+
+.selection-form-specific th {
+    background-color: #f2f2f2;
+}
+
+.selection-form-specific tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.selection-form-specific .submit-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: #1161ee;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.selection-form-specific .submit-button:hover {
+    background-color: #007acc;
+}
+
+.selection-form-specific {
+    height: 100%;
+    overflow: hidden;
+}
+
+.selection-form-specific .club-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Styling specific to Report Page */
+
+.report-main {
+    text-align: center;
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+.report-table-container, .chart-section {
+    margin: 0 auto 40px;
+    width: 90%;
+    border: 1px dashed #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.report-main table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.report-main th, .report-main td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.chart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    height: 400px;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling specific to Login and Signup Page */
+
+.login-signup-page body {
+    margin: 0;
+    color: #2e3a4e;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-signup-page *,
+.login-signup-page :after,
+.login-signup-page :before {
+    box-sizing: border-box;
+}
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1161ee;
+}
+
+.auth-page .auth-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-page .tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.auth-page .tab-buttons button {
+    background: none;
+    border: none;
+    color: #1161ee;
+    font-size: 18px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.auth-page .tab-buttons .active-tab {
+    color: #1161ee;
+    border-bottom: 2px solid #1161ee;
+}
+
+.auth-page .auth-section {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.auth-page .auth-section.active-section {
+    display: block;
+}
+
+.auth-page .auth-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2e3a4e;
+}
+
+.auth-page .auth-section input {
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    color: #2e3a4e;
+}
+
+.auth-page .stay-signed-in {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding: 5px;
+    width: auto;
+}
+
+.auth-page .stay-signed-in input[type="checkbox"] {
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 24px;
+    width: auto;
+}
+
+.auth-page .stay-signed-in label {
+    margin-bottom: 15px;
+    color: #2a3343;
+    white-space: nowrap;
+}
+
+.auth-page .main-btn {
+    width: calc(100% - 40px);
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+    background: #1161ee;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-page .main-btn:hover {
+    background: #007acc;
+}
+
+.auth-page .password-link {
+    display: block;
+    margin-top: 15px;
+    color: #1161ee;
+    text-decoration: none;
+}
+
+.auth-page .password-link:hover {
+    text-decoration: underline;
+}
+
+.auth-page .hidden {
+    display: none;
+}
+
+.auth-page #register-section input[type="password"]:last-of-type {
+    margin-bottom: 40px;
+}
