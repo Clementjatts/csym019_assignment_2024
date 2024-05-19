@@ -96,3 +96,4 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Error parsing team data:", e);
   }
 });
+

@@ -21,7 +21,6 @@ if (isset($_POST['teams'])) {
         $teams_data[] = $row;
     }
 
-    // Fetch match details and calculate stats
     $matches_sql = "SELECT 
                         home_team,
                         away_team,
