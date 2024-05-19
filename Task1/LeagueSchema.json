@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Premier League Match Results Schema",
+  "type": "object",
+  "properties": {
+    "Premier_League_Results": {
+      "title": "Array of Premier League Matches",
+      "type": "array",
+      "items": {
+        "title": "Single Match",
+        "type": "object",
+        "properties": {
+          "date": {
+            "title": "Match Date",
+            "type": "string",
+            "format": "date"
+          },
+          "hometeam": {
+            "title": "Home Team",
+            "type": "string"
+          },
+          "homescore": {
+            "title": "Home Team Score",
+            "type": "integer",
+            "minimum": 0
+          },
+          "awayscore": {
+            "title": "Away Team Score",
+            "type": "integer",
+            "minimum": 0
+          },
+          "awayteam": {
+            "title": "Away Team",
+            "type": "string"
+          },
+          "scorerhome": {
+            "title": "Home Team Scorers",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "goals": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": ["name", "goals"]
+            }
+          },
+          "scoreraway": {
+            "title": "Away Team Scorers",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "goals": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": ["name", "goals"]
+            }
+          }
+        },
+        "required": ["date", "hometeam", "homescore", "awayscore", "awayteam"]
+      }
+    }
+  },
+  "required": ["matchResults"],
+  "additionalProperties": false
+}

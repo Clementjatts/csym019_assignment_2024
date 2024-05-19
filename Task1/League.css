@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.3s;
+}
+
+th {
+    background-color: #eeeeee;
+    color: #333333;
+    font-size: 16px;
+}
+
+img {
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.form-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-icons .icon {
+    margin-right: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.form-icons .icon-last {
+    margin-right: 0;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+}
+
+/* New styles for centering content and footer */
+.container {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    position: fixed;
+    bottom: 0;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    width: 100px;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 16px;
+    text-align: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.scorers-table {
+    table-layout: fixed;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.scorers-table th, .scorers-table td {
+    width: 20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
